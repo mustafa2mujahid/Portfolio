@@ -761,10 +761,10 @@ And the rest is history.
                 st.markdown(f"### {blog['title']}")
                 st.markdown(f"*{blog['date']}*")
                 if blog['url']:
-                    if st.button(f"Read More", key=f"btn_{index}", type="primary"):
+                    if st.button(f"Read More", key=f"btn_{index}", type=f"primary"):
                         st.session_state.selected_blog_url = blog['url']
                 else:
-                    if st.button(f"Read more", key=f"read_more_{index}", type="primary"):
+                    if st.button(f"Read more", key=f"read_more_{index}", type=f"primary"):
                         st.session_state.selected_blog = index
             with cols[1]:
                 st.image(blog['image'], use_column_width=True)
