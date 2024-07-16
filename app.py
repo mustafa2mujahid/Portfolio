@@ -663,7 +663,7 @@ elif choose == "Volunteering":
     
     
 elif choose == "Blog":
-    st.write("Double Click two times on Read More button to react. Still working on the callback functions problem. Will resolve it soon. Sorry for the inconvenience.")
+    st.write("Click two times on Read More button to react.")
     # Sample data for blog posts
     blogs = [
         {
