@@ -55,13 +55,9 @@ st.markdown("""
     .stButton>button {
         background-color: #f5f5dc;  /* Primary color */
         color: black;  /* Font color */
-        border: 10px;
-        border-radius: 10px;
-        padding: 10px 20px;
-        display: inline-block;
-        margin: 0; /* Ensures no extra space around the button */
-        box-shadow: none; /* Removes any default shadow */
-        outline: none; /* Removes default outline on focus */
+        border: None;
+        border-radius: 4px;
+        padding: 12px 20px;
         cursor: pointer;
     }
     .stButton>button:hover {
