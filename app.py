@@ -215,19 +215,19 @@ with st.sidebar:
     }
     )
 
-linkedin_url = "https://www.linkedin.com/in/mustafa-mujahid-0675a122b/"
-medium_url = "https://medium.com/@mustafamujahid01"
-email_url = "mailto:mustafamujahid01@gmail.com"
-with st.container():
-    l, m, r = st.columns((0.11,2,0.1))
-    with l:
-        st.markdown("---")
-    with m:
-        st.markdown(
-            social_icons(35, 35, LinkedIn=linkedin_url, Medium=medium_url, Email=email_url),
-            unsafe_allow_html=True)
-    with r:
-        st.markdown("---")
+    linkedin_url = "https://www.linkedin.com/in/mustafa-mujahid-0675a122b/"
+    medium_url = "https://medium.com/@mustafamujahid01"
+    email_url = "mailto:mustafamujahid01@gmail.com"
+    with st.container():
+        l, m, r = st.columns((0.11,2,0.1))
+        with l:
+            st.markdown("---")
+        with m:
+            st.markdown(
+                social_icons(35, 35, LinkedIn=linkedin_url, Medium=medium_url, Email=email_url),
+                unsafe_allow_html=True)
+        with r:
+            st.markdown("---")
 
 st.write('<style>div.block-container{padding-top:0rem;color:black;}</style>', unsafe_allow_html=True)
 st.title("Mustafa Mujahid")
