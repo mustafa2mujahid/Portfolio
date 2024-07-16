@@ -43,7 +43,7 @@ def show_pdf(file_path):
         with open(file_path,"rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
         pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="400" height="600" type="application/pdf"></iframe>'
-        st.markdown(f"See Online {pdf_display}, unsafe_allow_html=True")
+        st.markdown(pdf_display, unsafe_allow_html=True")
 
 def pdf_link(pdf_url, link_text="Click here to view PDF"):
     href = f'<a href="{pdf_url}" target="_blank">{link_text}</a>'
@@ -842,5 +842,5 @@ elif choose == "Resume":
     st.write("*In case your current browser cannot display the PDF documents, do refer to the hyperlink below!*")
 
     st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
-    show_pdf("Resume.pdf")
     styled_download_button("Download Resume (1 page)", "Resume.pdf")
+    show_pdf("Resume.pdf")
