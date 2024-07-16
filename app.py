@@ -236,7 +236,8 @@ with st.sidebar:
         with l:
             st.empty()
         with m:
-            st.image(img_lh, width=175)
+            #st.image(img_lh, width=175)
+            st.empty()
         with r:
             st.empty()
     
