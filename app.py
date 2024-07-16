@@ -268,7 +268,7 @@ with st.sidebar:
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
-        "container": {"padding": "0!important", "background-color": "#f5f5dc"},
+        "container": {"padding": "0!important", "background-color": "#f5f5dc", "font-color": "black"},
         "options": {"color": "black", "font-size": "20px"},  # Adjusted style for the title
         "icon": {"color": "darkorange", "font-size": "20px"}, 
         "nav-link": {"font-size": "17px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "color": "black"},
