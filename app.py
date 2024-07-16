@@ -55,7 +55,7 @@ st.markdown("""
     <style>
     .stButton>button {
         background-color: #f5f5dc;  /* Primary color */
-        color: black;  /* Font color */
+        color: darkorange;  /* Font color */
         border: none;
         border-radius: 5px;
         padding: 12px 20px;
