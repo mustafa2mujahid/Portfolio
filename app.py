@@ -56,8 +56,8 @@ st.markdown("""
         background-color: #f5f5dc;  /* Primary color */
         color: black;  /* Font color */
         border: none;
-        border-radius: 5px;
-        padding: 10px 5px;
+        border-radius: 10px;
+        padding: 10px 20px;
         display: inline-block;
         margin: 0; /* Ensures no extra space around the button */
         box-shadow: none; /* Removes any default shadow */
@@ -785,7 +785,7 @@ And the rest is history.
                     if st.button(f"Read More", key=f"btn_{index}"):
                         st.session_state.selected_blog_url = blog['url']
                 else:
-                    if st.button(f"Read more", key=f"read_more_{index}"):
+                    if st.button(f"Read More", key=f"read_more_{index}"):
                         st.session_state.selected_blog = index
             with cols[1]:
                 st.image(blog['image'], use_column_width=True)
