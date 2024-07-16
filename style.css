@@ -90,6 +90,21 @@ footer:after {
     position: relative;
     color: black !important;
 }
+
+st.markdown("""
+    <style>
+    .stButton>button {
+        background-color: #f5f5dc;
+        color: black;
+        border: 1px solid #f5f5dc;
+        border-radius: 5px;
+    }
+    .stButton>button:hover {
+        background-color: #e0e0d1;
+        border-color: #e0e0d1;
+    }
+    </style>
+""", unsafe_allow_html=True)
 /* section[data-testid='stSidebar'] {
   
   min-width:unset !important;
