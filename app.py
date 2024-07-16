@@ -791,7 +791,7 @@ And the rest is history.
                         st.session_state.selected_blog = index
             with cols[1]:
                 st.image(blog['image'], use_column_width=True)
-            st.markdown('<hr style="border: 1px solid #f5f5dc;">', unsafe_allow_html=True)  # Separator
+            st.markdown('<hr style="border: 1px solid #030300;">', unsafe_allow_html=True)  # Separator
 
     # Initial session state
     if "selected_blog" not in st.session_state:
