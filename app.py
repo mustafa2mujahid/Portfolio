@@ -68,22 +68,17 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-    <style>
-    .stDownload_Button>download_button {
-        background-color: #f5f5dc;  /* Primary color */
-        color: darkorange;  /* Font color */
-        border: none;
-        border-radius: 5px;
-        padding: 12px 20px;
-        cursor: pointer;
-    }
-    }
-    .stButton>button:hover {
-        background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
-    }
-    </style>
-""", unsafe_allow_html=True)
+def styled_download_button(label, file_path, color="#f5f5dc", hover_color="#e5e5d1", font_color="darkorange"):
+    with open(file_path, "rb") as file:
+        # Generate the download button
+        button_html = f"""
+        <a download="{file_path}" href="data:file/{file_path};base64,{file.read().encode('base64').decode()}">
+            <button style="background-color: {color}; color: {font_color}; border: none; border-radius: 5px; padding: 12px 20px; cursor: pointer;">
+                {label}
+            </button>
+        </a>
+        """
+    st.markdown(button_html, unsafe_allow_html=True)
 
 
 
@@ -844,9 +839,4 @@ elif choose == "Resume":
     st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
     show_pdf("Resume.pdf")
     with open("Resume.pdf", "rb") as file:
-        btn = st.download_button(
-            label="Download Resume (1 page)",
-            data=file,
-            file_name="Resume.pdf",
-            mime="application/pdf"
-        )
+        styled_download_button("Download Resume (1 page)", "Resume.pdf")
