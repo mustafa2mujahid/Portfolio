@@ -68,6 +68,23 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+    <style>
+    .stDownload_Button>download_button {
+        background-color: #f5f5dc;  /* Primary color */
+        color: darkorange;  /* Font color */
+        border: none;
+        border-radius: 5px;
+        padding: 12px 20px;
+        cursor: pointer;
+    }
+    }
+    .stButton>button:hover {
+        background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 
 
 # Load assets
