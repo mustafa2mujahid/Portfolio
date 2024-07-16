@@ -63,7 +63,7 @@ st.markdown("""
         box-shadow: none; /* Removes any default shadow */
         outline: none; /* Removes default outline on focus */
         cursor: pointer;
-        width: auto;
+        width: 10px;
     }
     .stButton>button:hover {
         background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
