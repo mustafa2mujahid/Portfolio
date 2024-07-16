@@ -202,7 +202,7 @@ with st.sidebar:
             st.empty()
     
     choose = option_menu(
-                        "Mustafa Mujahid", 
+                         
                         ["About Me","Resume", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog"],
                          icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'heart', 'pencil square', 'image', 'paperclip', 'star fill', 'envelope'],
                          menu_icon="mortarboard", 
