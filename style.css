@@ -61,6 +61,36 @@ code {
     background-color: #f5f5dc;
 }
 
+/* Ensure the entire sidebar has the background color */
+[data-testid="stSidebar"] {
+    background-color: #f5f5dc !important;
+    padding: 0;
+}
+
+[data-testid="stSidebar"] > div {
+    background-color: #f5f5dc !important;
+    padding: 0;
+}
+
+.stSelectbox, .stTextInput, .stButton {
+    background-color: #f5f5dc;
+}
+
+/* Set all text to black */
+h1, h2, h3, h4, h5, h6, p, span, div, li, a, button, .stMarkdown {
+    color: black !important;
+}
+
+footer {
+    visibility: visible;
+    color: black !important;
+}
+
+footer:after {
+    content: 'Copyright © 2024 Mustafa Mujahid';
+    position: relative;
+    color: black !important;
+}
 /* section[data-testid='stSidebar'] {
   
   min-width:unset !important;
