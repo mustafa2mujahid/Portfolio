@@ -53,7 +53,7 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # Assets for about me
 img_utown = Image.open("image_collection/about_me/utown.jpg")
-img_lh = Image.open("image_collection/profile_photo/profile.jpg")
+#img_lh = Image.open("image_collection/profile_photo/profile.jpg")
 #Assets for competitions
 logithon = Image.open("image_collection/competition/logithon_stage.jpg")
 dmce_hackathon = Image.open("image_collection/competition/dmce_hackathon.jpg")
