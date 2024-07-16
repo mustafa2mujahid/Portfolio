@@ -70,16 +70,20 @@ st.markdown("""
 
 def styled_download_button(label, file_path, color="#f5f5dc", hover_color="#e5e5d1", font_color="darkorange"):
     with open(file_path, "rb") as file:
-        # Generate the download button
+        # Read file content
+        file_content = file.read()
+        # Encode file content as base64
+        encoded_content = base64.b64encode(file_content).decode()
+
+        # Generate the download button HTML
         button_html = f"""
-        <a download="{file_path}" href="data:file/{file_path};base64,{file.read().encode('base64').decode()}">
+        <a download="{file_path}" href="data:application/octet-stream;base64,{encoded_content}">
             <button style="background-color: {color}; color: {font_color}; border: none; border-radius: 5px; padding: 12px 20px; cursor: pointer;">
                 {label}
             </button>
         </a>
         """
     st.markdown(button_html, unsafe_allow_html=True)
-
 
 
 # Load assets
