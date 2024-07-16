@@ -59,6 +59,8 @@ st.markdown("""
         border-radius: 4px;
         padding: 12px 20px;
         cursor: pointer;
+        height: auto;
+        width: 100px;
     }
     .stButton>button:hover {
         background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
