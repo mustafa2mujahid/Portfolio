@@ -842,5 +842,5 @@ elif choose == "Resume":
     st.write("*In case your current browser cannot display the PDF documents, do refer to the hyperlink below!*")
 
     st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
-    styled_download_button("Download Resume (1 page)", "Resume.pdf")
     show_pdf("Resume.pdf")
+    styled_download_button("Download Resume (1 page)", "Resume.pdf")
