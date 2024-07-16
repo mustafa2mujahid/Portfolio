@@ -269,7 +269,7 @@ with st.sidebar:
                          default_index=0,
                          styles={
         "container": {"padding": "0!important", "background-color": "#f5f5dc"},
-        "title": {"color": "black", "font-size": "20px"}
+        "title": {"color": "black", "font-size": "20px"},
         "icon": {"color": "darkorange", "font-size": "20px"}, 
         "nav-link": {"font-size": "17px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "color": "black"},
         "nav-link-selected": {"background-color": "#cfcfb4"},
