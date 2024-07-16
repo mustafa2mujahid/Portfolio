@@ -668,49 +668,7 @@ And the rest is history.
         }
     ]
 
-    # Function to display each blog card
-    def display_blog_card(blog, index):
-        with st.container():
-            cols = st.columns([2, 1])
-            with cols[0]:
-                st.markdown(f"### {blog['title']}")
-                st.markdown(f"*{blog['date']}*")
-                if blog['url']:
-                    if st.button(f"Read More", key=f"btn_{index}"):
-                        st.session_state.selected_blog_url = blog['url']
-                else:
-                    if st.button(f"Read more", key=f"read_more_{index}"):
-                        st.session_state.selected_blog = index
-            with cols[1]:
-                st.image(blog['image'], use_column_width=True)
-            st.markdown('<hr style="border: 1px solid #f5f5dc;">', unsafe_allow_html=True)  # Separator
-    
-    # Initial session state
-    if "selected_blog" not in st.session_state:
-        st.session_state.selected_blog = None
-    
-    if "selected_blog_url" not in st.session_state:
-        st.session_state.selected_blog_url = None
-    
-    # Display blog cards or selected blog content
-    if st.session_state.selected_blog is None and st.session_state.selected_blog_url is None:
-        for i, blog in enumerate(blogs):
-            display_blog_card(blog, i)
-    else:
-        if st.session_state.selected_blog_url:
-            st.write(f"Redirecting to [this blog]({st.session_state.selected_blog_url})...")
-            st.markdown(f'<meta http-equiv="refresh" content="0; url={st.session_state.selected_blog_url}">', unsafe_allow_html=True)
-        else:
-            selected_blog = blogs[st.session_state.selected_blog]
-            st.image(selected_blog['image'], use_column_width=True)
-            st.markdown(f"### {selected_blog['title']}")
-            st.markdown(f"{selected_blog['date']}")
-            st.write(selected_blog['content'])
-            
-            if st.button("Back to Blog Posts"):
-                st.session_state.selected_blog = None
-                st.session_state.selected_blog_url = None
-    # # Function to display a blog card
+    # # Function to display each blog card
     # def display_blog_card(blog, index):
     #     with st.container():
     #         cols = st.columns([2, 1])
@@ -721,31 +679,28 @@ And the rest is history.
     #                 if st.button(f"Read More", key=f"btn_{index}"):
     #                     st.session_state.selected_blog_url = blog['url']
     #             else:
-    #                 # Use a unique key for each button to prevent multiple clicks
     #                 if st.button(f"Read more", key=f"read_more_{index}"):
     #                     st.session_state.selected_blog = index
     #         with cols[1]:
     #             st.image(blog['image'], use_column_width=True)
-    #         st.markdown("---")  # Separator
-
-    # # Check if a blog is selected
+    #         st.markdown('<hr style="border: 1px solid #f5f5dc;">', unsafe_allow_html=True)  # Separator
+    
+    # # Initial session state
     # if "selected_blog" not in st.session_state:
     #     st.session_state.selected_blog = None
-
+    
     # if "selected_blog_url" not in st.session_state:
     #     st.session_state.selected_blog_url = None
-
+    
     # # Display blog cards or selected blog content
     # if st.session_state.selected_blog is None and st.session_state.selected_blog_url is None:
     #     for i, blog in enumerate(blogs):
     #         display_blog_card(blog, i)
     # else:
     #     if st.session_state.selected_blog_url:
-    #         # Redirect to external blog URL
     #         st.write(f"Redirecting to [this blog]({st.session_state.selected_blog_url})...")
     #         st.markdown(f'<meta http-equiv="refresh" content="0; url={st.session_state.selected_blog_url}">', unsafe_allow_html=True)
     #     else:
-    #         # Display selected local blog content
     #         selected_blog = blogs[st.session_state.selected_blog]
     #         st.image(selected_blog['image'], use_column_width=True)
     #         st.markdown(f"### {selected_blog['title']}")
@@ -755,6 +710,51 @@ And the rest is history.
     #         if st.button("Back to Blog Posts"):
     #             st.session_state.selected_blog = None
     #             st.session_state.selected_blog_url = None
+    # Function to display a blog card
+    def display_blog_card(blog, index):
+        with st.container():
+            cols = st.columns([2, 1])
+            with cols[0]:
+                st.markdown(f"### {blog['title']}")
+                st.markdown(f"*{blog['date']}*")
+                if blog['url']:
+                    if st.button(f"Read More", key=f"btn_{index}"):
+                        st.session_state.selected_blog_url = blog['url']
+                else:
+                    # Use a unique key for each button to prevent multiple clicks
+                    if st.button(f"Read more", key=f"read_more_{index}"):
+                        st.session_state.selected_blog = index
+            with cols[1]:
+                st.image(blog['image'], use_column_width=True)
+            st.markdown("---")  # Separator
+
+    # Check if a blog is selected
+    if "selected_blog" not in st.session_state:
+        st.session_state.selected_blog = None
+
+    if "selected_blog_url" not in st.session_state:
+        st.session_state.selected_blog_url = None
+
+    # Display blog cards or selected blog content
+    if st.session_state.selected_blog is None and st.session_state.selected_blog_url is None:
+        for i, blog in enumerate(blogs):
+            display_blog_card(blog, i)
+    else:
+        if st.session_state.selected_blog_url:
+            # Redirect to external blog URL
+            st.write(f"Redirecting to [this blog]({st.session_state.selected_blog_url})...")
+            st.markdown(f'<meta http-equiv="refresh" content="0; url={st.session_state.selected_blog_url}">', unsafe_allow_html=True)
+        else:
+            # Display selected local blog content
+            selected_blog = blogs[st.session_state.selected_blog]
+            st.image(selected_blog['image'], use_column_width=True)
+            st.markdown(f"### {selected_blog['title']}")
+            st.markdown(f"{selected_blog['date']}")
+            st.write(selected_blog['content'])
+            
+            if st.button("Back to Blog Posts"):
+                st.session_state.selected_blog = None
+                st.session_state.selected_blog_url = None
 
 elif choose == "Resume":   
     resume_url = "https://drive.google.com/file/d/1AbBQRwfqEAbSS7-4bc4zVNRdgLJmpgHC/view?usp=sharing"
