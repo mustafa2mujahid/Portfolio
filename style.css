@@ -91,7 +91,7 @@ footer:after {
     color: black !important;
 }
 
-st.markdown("""
+/* st.markdown("""
     <style>
     .stButton>button {
         background-color: #f5f5dc;
@@ -104,7 +104,7 @@ st.markdown("""
         border-color: #e0e0d1;
     }
     </style>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True) */
 /* section[data-testid='stSidebar'] {
   
   min-width:unset !important;
