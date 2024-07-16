@@ -32,20 +32,7 @@ input[type=text], select, textarea {
     padding: 20px;
   }
 
-/* Ensure the entire sidebar has the background color */
-[data-testid="stSidebar"] {
-    background-color: #f5f5dc !important;
-    padding: 0;
-}
 
-[data-testid="stSidebar"] > div {
-    background-color: #f5f5dc !important;
-    padding: 0;
-}
-
-.stSelectbox, .stTextInput, .stButton {
-    background-color: #f5f5dc;
-}
   /* Hide Streamlit branding */
   #MainMenu {visibility: hidden;}
   footer {visibility: hidden;}
