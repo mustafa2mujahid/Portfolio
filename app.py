@@ -183,51 +183,12 @@ def add_bg_from_local(image_file):
         unsafe_allow_html=True
     )
 
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 add_bg_from_local('bg.png')
-
-
-# # Sidebar: If using streamlit_option_menu
-# with st.sidebar:
-#     with st.container():
-#         l, m, r = st.columns((1,3,1))
-#         with l:
-#             st.empty()
-#         with m:
-#             st.image(img_lh, width=175)
-#         with r:
-#             st.empty()
-    
-#     choose = option_menu(
-#                         "Mustafa Mujahid", 
-#                         ["About Me","Resume", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog"],
-#                          icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'heart', 'pencil square', 'image', 'paperclip', 'star fill', 'envelope'],
-#                          menu_icon="mortarboard", 
-#                          default_index=0,
-#                          styles={
-#         "container": {"padding": "0!important", "background-color": "#f5f5dc"},
-#         "icon": {"color": "darkorange", "font-size": "20px"}, 
-#         "nav-link": {"font-size": "17px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-#         "nav-link-selected": {"background-color": "#cfcfb4"},
-#     }
-#     )
-#     #youtube_url = "https://www.youtube.com/@harrychangjr"
-#     linkedin_url = "https://www.linkedin.com/in/mustafa-mujahid-0675a122b/"
-#     #github_url = "https://github.com/harrychangjr"
-#     medium_url = "https://medium.com/@mustafamujahid01"
-#     email_url = "mailto:mustafamujahid01@gmail.com"
-#     with st.container():
-#         l, m, r = st.columns((0.11,2,0.1))
-#         with l:
-#             st.markdown("---")
-#         with m:
-#             st.markdown(
-#                 social_icons(35, 35, LinkedIn=linkedin_url, Medium=medium_url, Email=email_url),
-#                 unsafe_allow_html=True)
-#         with r:
-#             st.markdown("---")
-
-# st.write('<style>div.block-container{padding-top:0rem;}</style>', unsafe_allow_html=True)
-# st.title("Mustafa Mujahid")
+local_css("style/style.css")
 
 # Sidebar: If using streamlit_option_menu
 with st.sidebar:
@@ -236,8 +197,7 @@ with st.sidebar:
         with l:
             st.empty()
         with m:
-            #st.image(img_lh, width=175)
-            st.empty()
+            st.image(img_lh, width=175)
         with r:
             st.empty()
     
@@ -254,19 +214,20 @@ with st.sidebar:
         "nav-link-selected": {"background-color": "#cfcfb4"},
     }
     )
-    linkedin_url = "https://www.linkedin.com/in/mustafa-mujahid-0675a122b/"
-    medium_url = "https://medium.com/@mustafamujahid01"
-    email_url = "mailto:mustafamujahid01@gmail.com"
-    with st.container():
-        l, m, r = st.columns((0.11,2,0.1))
-        with l:
-            st.markdown("---")
-        with m:
-            st.markdown(
-                social_icons(35, 35, LinkedIn=linkedin_url, Medium=medium_url, Email=email_url),
-                unsafe_allow_html=True)
-        with r:
-            st.markdown("---")
+
+linkedin_url = "https://www.linkedin.com/in/mustafa-mujahid-0675a122b/"
+medium_url = "https://medium.com/@mustafamujahid01"
+email_url = "mailto:mustafamujahid01@gmail.com"
+with st.container():
+    l, m, r = st.columns((0.11,2,0.1))
+    with l:
+        st.markdown("---")
+    with m:
+        st.markdown(
+            social_icons(35, 35, LinkedIn=linkedin_url, Medium=medium_url, Email=email_url),
+            unsafe_allow_html=True)
+    with r:
+        st.markdown("---")
 
 st.write('<style>div.block-container{padding-top:0rem;color:black;}</style>', unsafe_allow_html=True)
 st.title("Mustafa Mujahid")
