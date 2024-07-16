@@ -838,5 +838,4 @@ elif choose == "Resume":
 
     st.markdown(pdf_link(resume_url, "**Resume (1 page)**"), unsafe_allow_html=True)
     show_pdf("Resume.pdf")
-    with open("Resume.pdf", "rb") as file:
-        styled_download_button("Download Resume (1 page)", "Resume.pdf")
+    styled_download_button("Download Resume (1 page)", "Resume.pdf")
