@@ -53,7 +53,7 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
 st.markdown("""
     <style>
     .stButton>button {
-        background-color: #007bff;  /* Primary color */
+        background-color: #f5f5dc;  /* Primary color */
         color: white;  /* Font color */
         border: none;
         border-radius: 5px;
