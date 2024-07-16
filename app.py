@@ -54,16 +54,22 @@ st.markdown("""
     <style>
     .stButton>button {
         background-color: #f5f5dc;  /* Primary color */
-        color: white;  /* Font color */
+        color: black;  /* Font color */
         border: none;
         border-radius: 5px;
         padding: 10px 20px;
+        display: inline-block;
+        margin: 0; /* Ensures no extra space around the button */
+        box-shadow: none; /* Removes any default shadow */
+        outline: none; /* Removes default outline on focus */
+        cursor: pointer;
     }
     .stButton>button:hover {
-        background-color: #0056b3;  /* Darker shade for hover effect */
+        background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
     }
     </style>
 """, unsafe_allow_html=True)
+
 # Load assets
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # Assets for about me
