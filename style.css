@@ -46,6 +46,21 @@ code {
     border-radius: 4px !important;
 }
 
+/* Ensure the entire sidebar has the background color */
+[data-testid="stSidebar"] {
+    background-color: #f5f5dc !important;
+    padding: 0;
+}
+
+[data-testid="stSidebar"] > div {
+    background-color: #f5f5dc !important;
+    padding: 0;
+}
+
+.stSelectbox, .stTextInput, .stButton {
+    background-color: #f5f5dc;
+}
+
 /* section[data-testid='stSidebar'] {
   
   min-width:unset !important;
