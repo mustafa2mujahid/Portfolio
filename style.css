@@ -90,7 +90,7 @@ footer:after {
     position: relative;
     color: black !important;
 }
-st.markdown(""
+/* st.markdown("""
     <style>
     .stButton>button {
         background-color: #f5f5dc;
@@ -106,7 +106,7 @@ st.markdown(""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     </style>
-"", unsafe_allow_html=True)
+""", unsafe_allow_html=True) */
 
 /* Hide Streamlit branding */
 #MainMenu {visibility: hidden;}
