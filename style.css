@@ -77,7 +77,7 @@ code {
 }
 
 /* Set all text to black */
-h1, h2, h3, h4, h5, h6, p, {
+h1, h2, h3, h4, h5, h6, p, div, span, li, a{
     color: black !important;
 }
 footer {
