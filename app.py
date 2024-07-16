@@ -273,6 +273,7 @@ with st.sidebar:
         "icon": {"color": "darkorange", "font-size": "20px"}, 
         "nav-link": {"font-size": "17px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "color": "black"},
         "nav-link-selected": {"background-color": "#cfcfb4"},
+        "menu-title": {"color": "black"}
     }
     )
     linkedin_url = "https://www.linkedin.com/in/mustafa-mujahid-0675a122b/"
