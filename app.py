@@ -57,7 +57,7 @@ st.markdown("""
         color: black;  /* Font color */
         border: none;
         border-radius: 5px;
-        padding: 50px 10px;
+        padding: 10px 5px;
         display: inline-block;
         margin: 0; /* Ensures no extra space around the button */
         box-shadow: none; /* Removes any default shadow */
