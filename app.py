@@ -53,12 +53,12 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
 st.markdown("""
     <style>
     .stButton>button {
-        background-color: #f5f5dc;  /* Primary color */
-        color: black;  /* Font color */
-        border: None;
-        border-radius: 4px;
-        padding: 12px 20px;
-        cursor: pointer;
+        background-color: #f5f5dc !important;
+    font-family: 'Source Code Pro'!important;
+    font-size: 16px !important;
+    color: darkorange !important;
+    padding: 2px !important;
+    border-radius: 4px !important;
     }
     .stButton>button:hover {
         background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
