@@ -16,7 +16,7 @@ from streamlit_extras.echo_expander import echo_expander
 #test
 
 # Set page title
-st.set_page_config(page_title="Mustafa Mujahid", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
+st.set_page_config(page_title="Arshan Mujahid", page_icon = "desktop_computer", layout = "wide", initial_sidebar_state = "auto")
 
 # Use the following line to include your style.css file
 st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
