@@ -262,13 +262,14 @@ with st.sidebar:
             st.empty()
     
     choose = option_menu(
-                        
+                        "Mustafa Mujahid"
                         ["About Me","Resume", "Experience", "Technical Skills", "Education", "Projects", "Competitions", "Volunteering", "Blog"],
                          icons=['person fill', 'globe', 'clock history', 'tools', 'book half', 'clipboard', 'trophy fill', 'heart', 'pencil square', 'image', 'paperclip', 'star fill', 'envelope'],
                          menu_icon="mortarboard", 
                          default_index=0,
                          styles={
         "container": {"padding": "0!important", "background-color": "#f5f5dc"},
+        "options": {"color": "black", "font-size": "20px"},  # Adjusted style for the title
         "icon": {"color": "darkorange", "font-size": "20px"}, 
         "nav-link": {"font-size": "17px", "text-align": "left", "margin":"0px", "--hover-color": "#eee", "color": "black"},
         "nav-link-selected": {"background-color": "#cfcfb4"},
