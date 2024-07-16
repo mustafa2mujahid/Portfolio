@@ -3,11 +3,13 @@ from streamlit_option_menu import option_menu
 from streamlit.components.v1 import html
 from st_on_hover_tabs import on_hover_tabs
 #import requests
+#from streamlit_lottie import st_lottie
 from PIL import Image
 #import streamlit_analytics
 import base64
 from streamlit_extras.mention import mention
 from streamlit_extras.app_logo import add_logo
+#import sqlite3
 #from bs4 import BeautifulSoup
 from streamlit_extras.echo_expander import echo_expander
 
@@ -19,46 +21,12 @@ st.set_page_config(page_title="Mustafa Mujahid", page_icon = "desktop_computer",
 # Use the following line to include your style.css file
 st.markdown('<style>' + open('style.css').read() + '</style>', unsafe_allow_html=True)
 
-# def load_lottieurl(url):
-#     r = requests.get(url)
-#     if r.status_code != 200:
-#         return None
-#     return r.json()
+# Use local CSS
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-# def render_lottie(url, width, height):
-#     lottie_html = f"""
-#     <html>
-#     <head>
-#         <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.14/lottie.min.js"></script>
-#     </head>
-#     <body>
-#         <div id="lottie-container" style="width: {width}; height: {height};"></div>
-#         <script>
-#             var animation = lottie.loadAnimation({{
-#                 container: document.getElementById('lottie-container'),
-#                 renderer: 'svg',
-#                 loop: true,
-#                 autoplay: true,
-#                 path: '{url}'
-#             }});
-#             animation.setRendererSettings({{
-#                 preserveAspectRatio: 'xMidYMid slice',
-#                 clearCanvas: true,
-#                 progressiveLoad: false,
-#                 hideOnTransparent: true
-#             }});
-#         </script>
-#     </body>
-#     </html>
-#     """
-#     return lottie_html
-
-# # Use local CSS
-# def local_css(file_name):
-#     with open(file_name) as f:
-#         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-
-# local_css("style/style.css")
+local_css("style/style.css")
 
 footer = """
 footer{
