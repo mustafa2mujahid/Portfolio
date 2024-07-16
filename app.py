@@ -49,23 +49,37 @@ def pdf_link(pdf_url, link_text="Click here to view PDF"):
     href = f'<a href="{pdf_url}" target="_blank">{link_text}</a>'
     return href
 
-# Add custom CSS for button styling
 st.markdown("""
-    <style>
-    .stButton>button {
-        background-color: #f5f5dc;  /* Primary color */
-        color: black;  /* Font color */
-        border: none;
-        border-radius: 5px;
-        padding: 12px 20px;
-        cursor: pointer;
+<style>
+div.stButton > button:first-child {
+    background-color: #f5f5dc;
+    color:#ffffff;
+}
+div.stButton > button:hover {
+    background-color: #00ff00;
+    color:#ff0000;
     }
-    }
-    .stButton>button:hover {
-        background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
-    }
-    </style>
-""", unsafe_allow_html=True)
+</style>""", unsafe_allow_html=True)
+
+# # Add custom CSS for button styling
+# st.markdown("""
+#     <style>
+#     .stButton>button {
+#         background-color: #f5f5dc;  /* Primary color */
+#         color: black;  /* Font color */
+#         border: none;
+#         border-radius: 5px;
+#         padding: 12px 20px;
+#         cursor: pointer;
+#     }
+#     }
+#     .stButton>button:hover {
+#         background-color: #e5e5d1;  /* Slightly darker shade for hover effect */
+#     }
+#     </style>
+# """, unsafe_allow_html=True)
+
+
 
 # Load assets
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
