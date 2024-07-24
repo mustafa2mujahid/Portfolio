@@ -90,7 +90,7 @@ def styled_download_button(label, file_path, color="#f5f5dc", hover_color="#e5e5
 # Load assets
 #lottie_coding = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
 # Assets for about me
-img_utown = Image.open("image_collection/about_me/utown.jpg")
+#img_utown = Image.open("image_collection/about_me/utown.jpg")
 img_lh = Image.open("image_collection/profile_photo/profile.jpg")
 #Assets for competitions
 logithon = Image.open("image_collection/competition/logithon_stage.jpg")
@@ -324,8 +324,8 @@ if choose == "About Me":
             st.write("💭 Ideal Career Prospects: Machine Learning Engineer, Deep Learning Engineer, LLM Engineer, Data Analyst, Data Scientist, Data Engineer, Business Intelligence Analyst, Product Manager")
         with middle_column:
             st.empty()
-        with right_column:
-            st.image(img_utown)
+        # with right_column:
+        #     st.image(img_utown)
 
 # Create section for Work Experience
 elif choose == "Experience":
